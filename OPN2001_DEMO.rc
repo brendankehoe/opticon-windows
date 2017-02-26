@@ -1,0 +1,290 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\OPN2001_DEMO.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\OPN2001_DEMO.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 254, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About OPN2001 Companion Application"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+	LTEXT           "<Name>",IDC_STAT_VERSION,40,13,119,10,SS_NOPREFIX
+	LTEXT           "Copyright:",IDC_STAT_COPYRIGHT,40,64,189,8
+    DEFPUSHBUTTON   "OK",IDOK,189,7,50,16,WS_GROUP
+    LTEXT           "Version Info: ",IDC_STAT_APPL_VERSION,40,26,119,8,SS_NOPREFIX
+    LTEXT           "CSP2 DLL:",IDC_STAT_CSP2_VERSION,40,39,119,8,SS_NOPREFIX
+    LTEXT           "LoadDLL:",IDC_STAT_LOADDLL_VERSION,40,51,119,8,SS_NOPREFIX
+END
+
+IDD_OPN2001_DEMO_DIALOG DIALOGEX 0, 0, 489, 331
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "OPN2001 Companion Application"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Serial port",IDC_STATIC,102,7,132,35
+    COMBOBOX        IDC_CMBO_PORT,110,16,48,64,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Open",IDC_BTN_OPEN,159,16,33,12,WS_DISABLED
+    PUSHBUTTON      "Close",IDC_BTN_CLOSE,195,16,33,12,WS_DISABLED
+    GROUPBOX        "Options",IDC_STATIC,7,7,93,97
+    PUSHBUTTON      "Get information",IDC_BTN_INTERROGATE,109,105,63,12,WS_DISABLED
+    GROUPBOX        "Information",IDC_STATIC,102,43,133,77
+    LTEXT           "DLL Version:",IDC_STATIC,111,54,40,8
+    LTEXT           "",IDC_STAT_DLL_VERSION,157,54,63,8
+    GROUPBOX        "Scanner",IDC_STATIC,107,66,119,35
+    LTEXT           "Firmware:",IDC_STATIC,113,76,38,8
+    LTEXT           "ID:",IDC_STATIC,113,87,11,8
+    LTEXT           "",IDC_STAT_OS_VERSION,153,76,60,8
+    LTEXT           "",IDC_STAT_ID,131,87,85,8
+    PUSHBUTTON      "Get time",IDC_BTN_GET_TIME,13,29,39,12,WS_DISABLED
+    PUSHBUTTON      "Set time",IDC_BTN_SET_TIME,54,29,38,12,WS_DISABLED
+    CONTROL         "Automatic Mode",IDC_CHECK_AUTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,90,63,10
+    GROUPBOX        "Barcode data",IDC_STATIC,7,123,228,201
+    LISTBOX         IDC_LIST_BCD_DATA,7,131,220,102,LBS_HASSTRINGS | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Get barcodes",IDC_BTN_GET_BARCODE,13,16,78,12,WS_DISABLED
+    PUSHBUTTON      "Delete barcodes",IDC_BTN_CLEAR_BARCODE,8,108,60,12,WS_DISABLED
+    PUSHBUTTON      "Device Options",IDC_BTN_PARAMETERS,13,42,80,12,WS_DISABLED
+    CONTROL         "Save to file",IDC_CHECK_SAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,75,52,10
+    PUSHBUTTON      "About",IDC_BTN_ABOUT,177,105,50,12
+    COMBOBOX        IDC_COMBO_DELIMETER,83,263,63,13,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Text",IDC_RADIO_FORMAT_TEXT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,85,250,31,10
+    CONTROL         "CSV",IDC_RADIO_FORMAT_CSV,"Button",BS_AUTORADIOBUTTON,117,250,29,10
+    CONTROL         "USA",IDC_RADIO_DATE_USA,"Button",BS_AUTORADIOBUTTON | WS_GROUP,155,254,29,10
+    CONTROL         "EU",IDC_RADIO_DATE_EU,"Button",BS_AUTORADIOBUTTON,155,271,25,10
+    CONTROL         "Long",IDC_RADIO_DATE_LONG,"Button",BS_AUTORADIOBUTTON,155,288,31,10
+    CONTROL         "12Hr",IDC_RADIO_TIME_12,"Button",BS_AUTORADIOBUTTON | WS_GROUP,85,288,31,10
+    CONTROL         "24Hr",IDC_RADIO_TIME_24,"Button",BS_AUTORADIOBUTTON,117,288,27,10
+    LTEXT           "MM/DD/YY",IDC_STATIC,187,255,34,8
+    LTEXT           "DD/MM/YY",IDC_STATIC,187,272,34,8
+    LTEXT           "YYYY-MM-DD",IDC_STATIC,187,289,42,8
+    CONTROL         "Symbology",IDC_CHECK_SYMBOLOGY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,246,51,10
+    CONTROL         "Time of Scan",IDC_CHECK_TIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,255,51,10
+    CONTROL         "Date of Scan",IDC_CHECK_DATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,264,51,10
+    PUSHBUTTON      "...",IDC_BTN_BROWSE,72,74,21,12
+    CONTROL         "Show all",IDC_SHOW_ALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,30,42,10
+    CONTROL         141,IDC_DSR_STATUS,"Static",SS_BITMAP,137,32,8,7
+    LTEXT           "Status:",IDC_STATIC,111,31,24,8
+    CONTROL         141,IDC_DATA_STATUS,"Static",SS_BITMAP,91,111,8,7
+    LTEXT           "Mem:",IDC_STATIC,72,110,18,8
+    CONTROL         "Serial",IDC_CHECK_SERIAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,293,29,10
+    CONTROL         "Current Time",IDC_CURRENT_TIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,274,52,10
+    CONTROL         "Current Date",IDC_CURRENT_DATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,283,52,10
+    GROUPBOX        "Display",IDC_STATIC,7,235,71,89
+    GROUPBOX        "Time",IDC_STATIC,81,278,69,25
+    GROUPBOX        "Date",IDC_STATIC,151,244,80,59
+    GROUPBOX        "Formatting Options",IDC_STATIC,79,240,154,68
+    CONTROL         "Header Row",IDC_SHOW_HEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,303,55,10
+    CONTROL         "",IDC_LIST_OPNS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,244,7,238,300
+    CONTROL         "Start && Minimize as tray icon",IDC_CHECK_TRAY_ICON,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,311,106,10
+    PUSHBUTTON      ">>",IDC_BTN_VIEW_DETAILS,80,89,13,11
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,244,310,119,14
+    EDITTEXT        IDC_FIRMWARE_FILE_EDIT,283,311,137,13,ES_AUTOHSCROLL
+    LTEXT           "Firmware:",IDC_STATIC_FIRMWARE_FILE_TEXT,247,313,32,8
+    PUSHBUTTON      "...",IDC_BTN_BROWSE2,427,311,21,12
+    LTEXT           "",IDC_STATIC_PROGRESS_TEXT,367,313,94,12,NOT WS_VISIBLE
+    RTEXT           "0/0",IDC_COUNTERS,451,313,31,8
+    PUSHBUTTON      "Firmware Update",IDC_BTN_FIRMWARE_UPDATE,13,55,80,12,WS_DISABLED
+END
+
+IDD_DLG_PARAMETERS DIALOGEX 0, 0, 267, 282
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parameters"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Custom1",IDC_GRID_PARAMETERS,"MFCGridCtrl",WS_TABSTOP,7,7,253,247
+    PUSHBUTTON      "Factory Default",IDC_BTN_DEFAULT,183,262,68,12
+    PUSHBUTTON      "Apply",IDC_BTN_SETTINGS,13,262,48,12
+    PUSHBUTTON      "Reload",IDC_BTN_RESET,128,262,48,12
+    PUSHBUTTON      "Apply to all",IDC_BTN_APPLY_TO_ALL,67,262,53,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,14,0
+ PRODUCTVERSION 2,0,14,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Opticon Sensors Europe BV"
+            VALUE "FileDescription", "OPN Companion Application"
+            VALUE "FileVersion", "2.0.14.0"
+            VALUE "InternalName", "EGF3800E"
+            VALUE "LegalCopyright", "2016 © Opticon Sensors Europe BV"
+            VALUE "OriginalFilename", "OPN2001.exe"
+            VALUE "ProductName", "OPN-2001"
+            VALUE "ProductVersion", "2.14"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_OPN2001_DEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 482
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 324
+    END
+
+    IDD_DLG_PARAMETERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 278
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CONNECTED           BITMAP                  ".\\res\\connected.bmp"
+IDB_DISCONNECTED        BITMAP                  ".\\res\\disconnected.bmp"
+IDB_DISABLED            BITMAP                  ".\\res\\disabled.bmp"
+IDB_ERROR               BITMAP                  ".\\res\\error.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About OPN2001..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\OPN2001_DEMO.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
